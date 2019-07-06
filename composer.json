@@ -1,0 +1,41 @@
+{
+  "name": "brianhelton/brianhelton-web-theme",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "www.brianhelton.com",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    {
+      "name": "Aaron Collegeman",
+      "email": "aaroncollegeman@gmail.com",
+      "homepage": "https://aaroncollegeman.com"
+    },
+    {
+      "name": "Brian Helton",
+      "email": "brian.helton@gmail.com",
+      "homepage": "https://brianhelton.com"
+    }
+  ],
+  "keywords": ["wordpress"],
+  "support": {
+    "issues": "https://github.com/roots/sage/issues",
+    "forum": "https://discourse.roots.io/"
+  },
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0",
+    "illuminate/support": "5.6.*",
+    "roots/sage-lib": "~9.0.9",
+    "soberwp/controller": "~2.1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.8.0",
+    "roots/sage-installer": "~1.6"
+  },
+  "scripts": {
+    "test": ["phpcs"],
+    "post-create-project-cmd": [
+      "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
+    ]
+  }
+}
